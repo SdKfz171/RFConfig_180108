@@ -1,0 +1,141 @@
+﻿<Window x:Class="RFConfig.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RFConfig"
+        mc:Ignorable="d"
+        Title="RFConfigration" 
+        Height="350" Width="525"
+        MinHeight="350" MinWidth="525"
+        MaxHeight="450" MaxWidth="625"
+        Background="White" Icon="Assets/RF_1.ico">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="0.6*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="MainMenu" 
+              Grid.Column="0">
+
+            <Grid.RowDefinitions>
+              <RowDefinition Height="0.3*"/>
+              <RowDefinition Height="0.3*"/>
+              <RowDefinition Height="0.3*"/>
+              <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.Background>
+                <SolidColorBrush Opacity="0.5" Color="LightGray"/>
+            </Grid.Background>
+            <Button x:Name="HamburgerButton"
+                    Grid.Row="0"
+                    Margin="0" Width="40"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Left"
+                    HorizontalContentAlignment="Stretch"
+                    VerticalContentAlignment="Stretch"
+                    Background="Transparent" BorderThickness="0"
+                    Click="HamburgerButton_Click">
+                <Button.Content>
+                    <Grid>
+                        <Rectangle Margin="7 10">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Assets/TranspE700.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Grid>
+                </Button.Content>
+            </Button>
+            
+            <Button x:Name="ConnectButton" 
+                    Grid.Row="1"
+                    Padding="0 5" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                    VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"
+                    Background="Transparent" BorderThickness="0"
+                    Click="ConnectButton_Click">
+                <Button.Content>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Rectangle Margin="7 7">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="Assets/TranspConnect.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <Label x:Name="ConnectLabel" 
+                               Grid.Column="1"
+                               FontSize="16"
+                               Margin="5 0"
+                               VerticalAlignment="Center"
+                               Visibility="Visible">연결하기</Label>
+                    </Grid>
+                </Button.Content>
+            </Button>
+
+            <Button x:Name="SendButton"
+                    Grid.Row="2"
+                    Padding="0 5" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                    VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"
+                    Background="Transparent" BorderThickness="0"
+                    Click="SendButton_Click">
+                <Button.Content>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Rectangle Margin="6 5">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="Assets/TranspSend.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <Label x:Name="SendLabel" 
+                               Grid.Column="1"
+                               FontSize="16"
+                               Margin="5 0"
+                               VerticalAlignment="Center"
+                               Visibility="Visible">전송하기</Label>
+                    </Grid>
+                </Button.Content>
+            </Button>
+        </Grid>
+        
+        <Frame x:Name="MainFrame" 
+               Grid.Column="1"
+               NavigationUIVisibility="Hidden">
+            
+        </Frame>
+    </Grid>
+</Window>
+
+
+<!--<Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="False">
+                                <Setter Property="Background" Value="Transparent" />
+                                -->
+<!--<Setter Property="Opacity" Value="1.0" />-->
+<!--
+                            </Trigger>
+                            <EventTrigger RoutedEvent="MouseLeave">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0.2" To="1"></DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0.2" To="0.2"></DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>-->
