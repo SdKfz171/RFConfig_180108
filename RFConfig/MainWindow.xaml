@@ -70,7 +70,8 @@
                                FontSize="16"
                                Margin="5 0"
                                VerticalAlignment="Center"
-                               Visibility="Visible">연결하기</Label>
+                               Visibility="Visible"
+                               FontWeight="Bold">연결하기</Label>
                     </Grid>
                 </Button.Content>
             </Button>
@@ -98,7 +99,8 @@
                                FontSize="16"
                                Margin="5 0"
                                VerticalAlignment="Center"
-                               Visibility="Visible">전송하기</Label>
+                               Visibility="Visible"
+                               FontWeight="Bold">전송하기</Label>
                     </Grid>
                 </Button.Content>
             </Button>
